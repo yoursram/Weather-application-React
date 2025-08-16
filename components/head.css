@@ -1,0 +1,50 @@
+.outerContainer {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 4px 15px rgba(255, 154, 158, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.outerContainer::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+.outerContainer::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+.innercontainer h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .innercontainer h1 {
+        font-size: 2rem;
+    }
+}

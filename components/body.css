@@ -1,0 +1,40 @@
+div {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #ff9a9e;
+    font-size: 18px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+input {
+    width: 100%;
+    padding: 15px 25px;
+    margin: 15px 0 30px;
+    box-sizing: border-box;
+    border: 2px solid #fad0c4;
+    border-radius: 50px;
+    font-size: 16px;
+    outline: none;
+    background-color: white;
+    color: #ff9a9e;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    box-shadow: 0 4px 10px rgba(250, 208, 196, 0.5);
+    transition: all 0.3s ease;
+}
+
+input::placeholder {
+    color: #fad0c4;
+    font-style: italic;
+}
+
+input:focus {
+    border-color: #ff9a9e;
+    box-shadow: 0 4px 15px rgba(255, 154, 158, 0.4);
+}

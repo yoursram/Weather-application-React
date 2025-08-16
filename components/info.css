@@ -1,0 +1,111 @@
+div {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: 0 8px 20px rgba(255, 154, 158, 0.2);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    transition: transform 0.3s ease;
+}
+
+div:hover {
+    transform: translateY(-5px);
+}
+
+div::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ff9a9e"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>') no-repeat;
+    background-size: 40px;
+    opacity: 0.1;
+}
+
+h3 {
+    color: #ff9a9e;
+    margin-top: 0;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+h3::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #fad0c4;
+    margin: 10px auto;
+    border-radius: 3px;
+}
+
+p {
+    font-size: 18px;
+    color: #888;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    position: relative;
+}
+
+p::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background: #ff9a9e;
+    border-radius: 50%;
+}
+
+[style*="color: red"] {
+    background: #fff0f0;
+    padding: 15px;
+    border-radius: 10px;
+    color: #ff6b6b !important;
+    font-weight: 500;
+    text-align: center;
+    animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Weather condition specific styling */
+[data-condition="Clear"] {
+    color: #FFD166; /* Sunshine yellow */
+}
+[data-condition="Clouds"] {
+    color: #A5B1C2; /* Soft cloud gray */
+}
+[data-condition="Rain"] {
+    color: #74B9FF; /* Rainy blue */
+    animation: raindrop 2s infinite;
+}
+[data-condition="Snow"] {
+    color: #DFF9FB; /* Snow white */
+    animation: sparkle 2s infinite;
+}
+[data-condition="Thunderstorm"] {
+    color: #A55EEA; /* Storm purple */
+}
+
+@keyframes raindrop {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(3px); }
+}
+
+@keyframes sparkle {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
